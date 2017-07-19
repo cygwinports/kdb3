@@ -1,0 +1,11 @@
+--- origsrc/kdb-3.0.1/tools/sdc.py	2017-03-09 03:20:11.238698400 -0600
++++ src/kdb-3.0.1/tools/sdc.py	2017-07-18 02:03:44.042811700 -0500
+@@ -856,7 +856,7 @@ def process():
+             if not data_class_ctor_changed:
+                 data_class_ctor = """    //! @internal data class used to implement %s shared class %s.
+     //! Provides thread-safe reference counting.
+-    class Data : public %s
++    class KDB_EXPORT Data : public %s
+     {
+     public:
+         Data()

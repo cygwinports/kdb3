@@ -1,0 +1,32 @@
+inherit kf5
+
+NAME="kdb3"
+VERSION=3.0.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE database connectivity library"
+DESCRIPTION="KDb is a database connectivity and creation framework, consisted
+of a general-purpose C++ Qt library and set of plugins delivering support for
+various database vendors."
+HOMEPAGE="https://community.kde.org/KDb"
+SRC_URI="mirror://kde/stable/kdb/src/kdb-${VERSION}.tar.xz"
+SRC_DIR="kdb-${VERSION}"
+PATCH_URI="
+	3.0.1-cygwin-extension.patch
+	3.0.1-dllexport.patch
+"
+
+PKG_NAMES="libKDb3_3 libKDb3-devel"
+libKDb3_3_CONTENTS="
+	usr/bin/cygKDb3-3.dll
+	usr/bin/kdb3_sqlite3_dump.exe
+	usr/lib/qt5/plugins/kdb3/
+	usr/share/doc/${NAME}
+"
+libKDb3_devel_CONTENTS="
+	usr/include/KDb3/
+	usr/lib/cmake/KDb3/
+	usr/lib/libKDb3.dll.a
+	usr/lib/pkgconfig/KDb3.pc
+	usr/lib/qt5/mkspecs/modules/qt_KDb3.pri
+"
