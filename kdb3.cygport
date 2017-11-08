@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kdb3"
-VERSION=3.0.1
+VERSION=3.0.2
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE database connectivity library"
@@ -22,6 +22,7 @@ libKDb3_3_CONTENTS="
 	usr/bin/kdb3_sqlite3_dump.exe
 	usr/lib/qt5/plugins/kdb3/
 	usr/share/doc/${NAME}
+	usr/share/locale/*/LC_MESSAGES/kdb_*
 "
 libKDb3_devel_CONTENTS="
 	usr/include/KDb3/
