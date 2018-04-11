@@ -2,7 +2,7 @@ inherit kf5
 
 NAME="kdb3"
 VERSION=3.0.2
-RELEASE=2
+RELEASE=3
 CATEGORY="Libs"
 SUMMARY="KDE database connectivity library"
 DESCRIPTION="KDb is a database connectivity and creation framework, consisted
